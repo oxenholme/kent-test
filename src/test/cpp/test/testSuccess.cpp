@@ -3,14 +3,14 @@
 #include "test/test.h"
 #include "test/testRegistrar.h"
 
-class TestSuccess : public test::Test {
+class test_success : public test::test {
 public:
-    TestSuccess() : test::Test("TestSuccess") {
+    test_success() : test::test("TestSuccess") {
     }
 
     void operator()() {
     }
 };
 
-static test::TestRegistrar myRegistrar(new TestSuccess());
+static test::test_registrar my_registrar(new test_success());
 

@@ -3,9 +3,9 @@
 #include "test/test.h"
 #include "test/testRegistrar.h"
 
-class TestError : public test::Test {
+class test_error : public test::test {
 public:
-    TestError() : test::Test("TestError") {
+    test_error() : test::test("TestError") {
     }
 
     void operator()() {
@@ -13,5 +13,5 @@ public:
     }
 };
 
-static test::TestRegistrar myRegistrar(new TestError());
+static test::test_registrar my_registrar(new test_error());
 

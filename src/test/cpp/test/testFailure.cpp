@@ -4,15 +4,15 @@
 #include "test/testFailure.h"
 #include "test/testRegistrar.h"
 
-class TestFailure : public test::Test {
+class test_failure : public test::test {
 public:
-    TestFailure() : test::Test("TestFailure") {
+    test_failure() : test("TestFailure") {
     }
 
     void operator()() {
-        throw test::TestFailure("Throw");
+        throw ::test::test_failure("Throw");
     }
 };
 
-static test::TestRegistrar myRegistrar(new TestFailure());
+static test::test_registrar my_registrar(new test_failure());
 

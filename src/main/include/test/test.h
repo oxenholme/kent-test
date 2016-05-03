@@ -5,14 +5,14 @@
 
 namespace test {
 
-    class TestResult;
+    class test_result;
 
-    class Test {
+    class test {
     public:
-        Test(const std::string& name) : _name(name) {
+        test(const std::string& name) : _name(name) {
         }
 
-        void test(TestResult& results);
+        void run_test(test_result& results);
 
     protected:
         virtual void operator()() = 0;

@@ -1,12 +1,9 @@
 #include "test/testRegistrar.h"
 #include "test/testRegistry.h"
 
-test::TestRegistry* test::TestRegistry::_instance;
+test::test_registry* test::test_registry::_instance;
 
-test::TestRegistrar::TestRegistrar(Test* test) {
-    TestRegistry::instance().addTest(test);
-}
-
-test::TestRegistrar::~TestRegistrar() {
+test::test_registrar::test_registrar(test* test) {
+    test_registry::instance().add_test(test);
 }
 

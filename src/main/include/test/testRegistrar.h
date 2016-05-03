@@ -5,10 +5,9 @@
 
 namespace test {
 
-    class TestRegistrar {
+    class test_registrar {
     public:
-        TestRegistrar(Test* test);
-        ~TestRegistrar();
+        test_registrar(test* test);
     };
 }
 

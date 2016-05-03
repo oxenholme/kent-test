@@ -5,11 +5,9 @@
 
 namespace test {
 
-    class TestFailure : public std::exception {
+    class test_failure : public std::exception {
     public:
-        TestFailure(const std::string& reason) : _reason(reason) {
-        }
-        ~TestFailure() throw() {
+        test_failure(const std::string& reason) : _reason(reason) {
         }
 
 	const char* what() const throw() {

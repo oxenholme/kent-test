@@ -7,32 +7,30 @@
 
 namespace test {
 
-    class TestRegistry {
+    class test_registry {
     public:
-        static TestRegistry& instance() {
+        static test_registry& instance() {
             if (_instance == 0) {
-                _instance = new TestRegistry();
+                _instance = new test_registry();
             }
             return *_instance;
         }
 
-        void addTest(Test* test) {
+        void add_test(test* test) {
             _tests.push_back(test);
         }
 
-        std::vector<Test*>& getTests() {
+        std::vector<test*>& get_tests() {
             return _tests;
         }
 
     private:
-        TestRegistry() {
-        }
-        ~TestRegistry() {
+        test_registry() {
         }
 
-        std::vector<Test*> _tests;
+        std::vector<test*> _tests;
 
-        static TestRegistry* _instance;
+        static test_registry* _instance;
     };
 }
 

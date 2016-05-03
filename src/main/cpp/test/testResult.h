@@ -5,10 +5,9 @@
 
 namespace test {
 
-    class TestResult {
+    class test_result {
     public:
-        TestResult();
-        ~TestResult();
+        test_result();
 
         void start(const std::string& name);
         void success(const std::string& name);
@@ -17,13 +16,13 @@ namespace test {
 
         bool summary();
 
-        int getSuccess() {
+        int get_success() {
             return _success;
         }
-        int getFailure() {
+        int get_failure() {
             return _failure;
         }
-        int getError() {
+        int get_error() {
             return _error;
         }
 
